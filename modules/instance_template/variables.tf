@@ -30,4 +30,8 @@ variable "tags" {
 variable "labels" {
   type        = map(string)
   description = "Labels, provided as a map"
+  labels = {
+  owner = "wppitcoe"
+  iac   = "tfe"
+  }
 }
