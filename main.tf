@@ -11,7 +11,7 @@ resource "google_compute_instance" "default" {
 }
   
 module "instance_template" {
-  source          = "./modules/instance_template"
+  source          = "./modules/instance_template/modules"
   region          = var.region
   project_id      = var.project_id
   subnetwork      = var.subnetwork
