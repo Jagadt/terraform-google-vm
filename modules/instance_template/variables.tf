@@ -26,7 +26,7 @@ variable "tags" {
   type        = list(string)
   description = "Network tags, provided as a list"
   default = {
-  vm = "gcetraffic, europe"
+  tags = "gcetraffic, europe"
      }
 }
 
