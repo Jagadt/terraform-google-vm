@@ -30,7 +30,7 @@ variable "tags" {
 variable "labels" {
   type        = map(string)
   description = "Labels, provided as a map"
-  labels = {
+  default = {
   owner = "wppitcoe"
   iac   = "tfe"
   }
