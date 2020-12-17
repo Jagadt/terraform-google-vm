@@ -10,7 +10,7 @@ locals {
 }
 
 module "instance_template" {
-source          = "./modules/instance_template"
+source          = "./instance_template"
 #locals {
   project_id      = var.project_id
   subnetwork      = var.subnetwork
