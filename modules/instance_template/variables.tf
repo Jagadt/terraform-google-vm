@@ -4,13 +4,13 @@ variable "project_id" {
 }
 
 variable "region" {
-  description = "provide the GCP region to create and test resources in"
+  description = "Provide the GCP region to create and test resources in"
   type        = string
   default     = "europe-west2"
 }
 
 variable "subnetwork" {
-  description = "The name of the subnetwork create this instance in."
+  description = "Provide the name of the existing subnetwork to create this instance in."
   }
 
 variable "service_account" {
