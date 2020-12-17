@@ -27,6 +27,7 @@ variable "tags" {
   description = "Network tags, provided as a list"
   default = {
   vm = "gcetraffic"
+  region = "europe"  
     }
 }
 
