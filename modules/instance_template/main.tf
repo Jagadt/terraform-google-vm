@@ -1,10 +1,3 @@
-provider "google" {
-
-  project = var.project_id
-  region  = var.region
-  version = "~> 3.0"
-}
-
 resource "google_compute_address" "ip_address" {
   name = "external-ip"
 }
