@@ -1,18 +1,17 @@
 variable "project_id" {
-  description = "The GCP project to use for integration tests"
+  description = "Provide the GCP projectid"
   type        = string
 }
 
 variable "region" {
-  description = "The GCP region to create and test resources in"
+  description = "provide the GCP region to create and test resources in"
   type        = string
-  default     = "us-central1"
+  default     = "europe-west2"
 }
 
 variable "subnetwork" {
   description = "The name of the subnetwork create this instance in."
-  default     = ""
-}
+  }
 
 variable "service_account" {
   default = null
