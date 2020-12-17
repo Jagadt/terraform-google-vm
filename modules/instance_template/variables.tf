@@ -26,9 +26,8 @@ variable "tags" {
   type        = list(string)
   description = "Network tags, provided as a list"
   default = {
-  vm = "gcetraffic"
-  region = "europe"  
-    }
+  vm = "gcetraffic, europe"
+     }
 }
 
 variable "labels" {
