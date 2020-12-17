@@ -25,7 +25,7 @@ variable "service_account" {
 variable "tags" {
   type        = list(string)
   description = "Network tags, provided as a list"
-  default = "gcetraffic"
+  default = null
   }
 
 variable "labels" {
