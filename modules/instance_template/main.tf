@@ -18,5 +18,5 @@ locals {
   name_prefix     = "simple"
   tags            = var.tags
   labels          = var.labels
-  access_config   = [local.access_config]
+# access_config   = [local.access_config]
 }
