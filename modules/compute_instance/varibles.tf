@@ -1,33 +1,49 @@
-variable "resource_group_name" {
-  description = "The name of the resource group we want to use"
+variable "network" {
+  description = "Network to deploy to. Only one of network or subnetwork should be specified."
   default     = ""
 }
 
-variable "location" {
-  description = "The location/region where we are crrating the resource"
+variable "subnetwork" {
+  description = "Subnet to deploy to. Only one of network or subnetwork should be specified."
   default     = ""
 }
 
-variable "tags" {
-  description = "The tags to associate the resource we are creating"
-  type        = "map"
-  default     = {}
-}
-
-# Everything below is for the module
-
-variable "vnet_name" {
-  description = "Name of the vnet to create the subnets in"
+variable "subnetwork_project" {
+  description = "The project that subnetwork belongs to"
   default     = ""
 }
 
-variable "subnets" {
-  type        = "list"
-  description = "The address prefix to use for the subnet."
+variable "hostname" {
+  description = "Hostname of instances"
+  default     = ""
+}
+
+variable "static_ips" {
+  type        = list(string)
+  description = "List of static IPs for VM instances"
   default     = []
 }
 
-variable "add_endpoint" {
-  description = "should we be adding an endpint, leave this as is"
-  default     = false
+variable "access_config" {
+  description = "Access configurations, i.e. IPs via which the VM instance can be accessed via the Internet."
+  type = list(object({
+    nat_ip       = string
+    network_tier = string
+  }))
+  default = []
+}
+
+variable "num_instances" {
+  description = "Number of instances to create. This value is ignored if static_ips is provided."
+  default     = "1"
+}
+
+variable "instance_template" {
+  description = "Instance template self_link used to create compute instances"
+}
+
+variable "region" {
+  type        = string
+  description = "Region where the instances should be created."
+  default     = null
 }
