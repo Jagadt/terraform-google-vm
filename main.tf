@@ -1,8 +1,3 @@
-provider "google" {
-
-  version = "~> 3.0"
-}
-
 module "instance_template" {
   source          = "../../../modules/instance_template"
   region          = var.region
